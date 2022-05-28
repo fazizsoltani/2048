@@ -46,4 +46,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/2048/2048-${{ matrix.node-version }}:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/2048:${{ matrix.node-version }}
