@@ -14,7 +14,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write .",
-    "check-style": "prettier --check ."
+    "check-style": "prettier --check .",
+    "lint": "yarn run eslint src/App.tsx"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +36,10 @@
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-plugin-react": "^7.30.0",
     "prettier": "2.6.2",
     "typescript": "^3.6.2"
   }
