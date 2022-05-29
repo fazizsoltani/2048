@@ -73,7 +73,7 @@
 
 .game-container {
   position: relative;
-  background: #BBADA0;
+  background: #bbada0;
   border-radius: 6px;
   margin-top: 40px;
   padding: 15px;
@@ -86,7 +86,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(238, 228, 218, .5);
+  background: rgba(238, 228, 218, 0.5);
   z-index: 100;
   text-align: center;
   animation: fade-in 800ms ease 1200ms;
@@ -94,7 +94,7 @@
 }
 
 .game-container .game-message.game-won {
-  background: rgba(237, 194, 46, .5);
+  background: rgba(237, 194, 46, 0.5);
   color: #f9f6f2;
 }
 

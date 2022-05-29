@@ -3,7 +3,7 @@ name: Test for PR on develop branch
 on:
   pull_request:
     branches:
-      - 'master'
+      - "master"
 
 jobs:
   build:
@@ -33,11 +33,11 @@ jobs:
       - name: Install Dependencies
         run: yarn install --prefer-offline --frozen-lockfile
 
-        #      - name: Checking Code-Style
-        #        run: yarn check-style
+      - name: Checking Code-Style
+        run: yarn check-style
         #
         #      - name: Checking Code-Quality
         #        run: yarn lint
 
-      - name: Build 
+      - name: Build
         run: yarn build
