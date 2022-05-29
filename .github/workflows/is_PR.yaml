@@ -3,7 +3,7 @@ name: Test for PR on develop branch
 on:
   pull_request:
     branches:
-      - 'master'
+      - "master"
 
 jobs:
   build:
@@ -39,5 +39,5 @@ jobs:
       - name: Checking Code-Quality
         run: yarn lint
 
-      - name: Build 
+      - name: Build
         run: yarn build
