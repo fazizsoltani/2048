@@ -51,5 +51,8 @@ jobs:
       - name: unit test
         run: yarn test
 
+      - name: converage
+        run: yarn coverage
+
       - name: Build
         run: yarn build
