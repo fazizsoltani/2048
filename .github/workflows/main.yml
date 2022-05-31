@@ -67,4 +67,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/2048:node${{ steps.releaseVariables.outputs.VERSION }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/2048:${{ steps.releaseVariables.outputs.VERSION }}
