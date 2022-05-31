@@ -17,7 +17,8 @@
     "check-style": "prettier --check .",
     "prepare": "husky install",
     "lint": "yarn run eslint .",
-    "test": "jest src/calculator.test.js"
+    "test": "jest src/calculator.test.js",
+    "coverage": "jest --coverage src/calculator.test.js "
   },
   "eslintConfig": {
     "extends": "react-app"
