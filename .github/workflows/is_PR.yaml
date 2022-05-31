@@ -3,7 +3,7 @@ name: Test for PR on develop branch
 on:
   pull_request:
     branches:
-      - "master"
+      - "develop"
 
 jobs:
   build:
