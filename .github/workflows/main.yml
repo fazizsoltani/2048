@@ -43,6 +43,12 @@ jobs:
         #      - name: Yarn build
         #        run: yarn build
 
+      - name: create variables
+        id: releaseVariables
+        run: |
+          echo "::set-output name=RELEASEEXIST::$(cat nextrelease |grep nextReleaseExist|cut -d "=" -f2)"
+          echo "::set-output name=VERSION::$(cat nextrelease |grep nextReleaseVersion|cut -d "=" -f2)"
+
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
@@ -58,4 +64,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/2048:node${{ matrix.node-version }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/2048:node${{ steps.releaseVariables.outputs.VERSION }}
