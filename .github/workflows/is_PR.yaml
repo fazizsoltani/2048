@@ -56,3 +56,15 @@ jobs:
 
       - name: Build
         run: yarn build
+
+  commit-check:
+    name: commit check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: check commit message
+        run: ./.github/scripts/check-commit-message.sh
+        shell: bash
