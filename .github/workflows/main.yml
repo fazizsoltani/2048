@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: "lts/*"
 
+      - name: install dependecies
+        run: yarn install
+
       - name: Checking Code-Style
         run: yarn check-style
 
