@@ -1,39 +1,80 @@
 # 2048-react
+![example](https://user-images.githubusercontent.com/19590194/64501857-c37bc600-d2f5-11e9-80b2-879fcaa060e2.png)
 
 This is the [react](https://reactjs.org/) port of the 2048 game designed by Gabriele Cirulli https://github.com/gabrielecirulli/2048
 
-## Example
+# Issues & Questions
 
-![example](https://user-images.githubusercontent.com/19590194/64501857-c37bc600-d2f5-11e9-80b2-879fcaa060e2.png)
+For reporting issues or asking questions please use the [github issues](https://github.com/fazizsoltani/2048/issues)
 
-## Demo
+# Getting Started
 
-[Demo](https://jinhucheung.github.io/2048-react/)
+Before getting started, you need to install the [latest LTS version of nodejs](https://nodejs.org/en/download/). Also, It is better to use yarn as package manager, for this purpose you can use the following instruction:
 
-## Installation
+```bash
+# Install via npm
+npm install --global yarn
 
-Install packages:
+# Install via Chocolatey
+choco install yarn
 
+# Install via Scoop
+scoop install yarn
+
+yarn --version
 ```
-$ yarn install
+
+## How to install dependencies
+
+Installing all the dependencies is just simple as running one of the following commands:
+
+NPM:
+
+```bash
+npm install
 ```
 
-Then run the app:
+Yarn:
 
+```bash
+yarn install
 ```
-$ yarn start
+
+## How to start development
+
+After installing dependencies, running the following command will run a node server on [http://localhost:3000](http://localhost:3000) and code will be compiled at loading of each page. It also supports hot reload, so every change on the source code will be applied to view simultaneously.
+
+NPM:
+
+```bash
+npm start
 ```
+
+Yarn:
+
+```bash
+yarn start
+```
+
+## How to test dockerize app
+
+build docker image with this command:
+```
+docker build . -t 2048:1.0.0
+```
+
+run container with this command:
+```
+docker run -d --name 2048-app -p 3000:3000 2048:1.0.0
+```
+
+After running conainer, running the following command will run a node server on [http://localhost:3000](http://localhost:3000) and code will be compiled at loading of each page. It also supports hot reload, so every change on the source code will be applied to view simultaneously.
 
 ## Contributing
 
-Bug report or pull request are welcome.
+### Contributing Guidelines
 
-1. Fork it
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
-
-Please write unit test with your code if necessary.
+Read through our [contributing guidelines](CONTRIBUTING.md) to learn about our submission process, coding rules and more.
 
 ## License
 
