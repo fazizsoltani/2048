@@ -9,3 +9,4 @@ echo "--------------------------------------"
 
 
 [[ $commitmessage =~ $pattern ]] && (echo "commit message is ok" && exit 0) || (echo "commit message is wrong" &&exit 1)
+
