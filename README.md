@@ -1,4 +1,5 @@
 # 2048-react
+
 ![example](https://user-images.githubusercontent.com/19590194/64501857-c37bc600-d2f5-11e9-80b2-879fcaa060e2.png)
 
 This is the [react](https://reactjs.org/) port of the 2048 game designed by Gabriele Cirulli https://github.com/gabrielecirulli/2048
@@ -59,11 +60,13 @@ yarn start
 ## How to test dockerize app
 
 build docker image with this command:
+
 ```
 docker build . -t 2048:1.0.0
 ```
 
 run container with this command:
+
 ```
 docker run -d --name 2048-app -p 3000:3000 2048:1.0.0
 ```

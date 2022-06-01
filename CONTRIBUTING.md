@@ -1,12 +1,13 @@
 # Contributing
 
-
 ## Welcome
+
 the 2048 team pleased to have you as a contributor to this project.
 
-
 ---
+
 ## Table of content
+
 [Our enviroments](#our-enviroments)
 
 [Branching strategy](#branching-strategy)
@@ -14,23 +15,22 @@ the 2048 team pleased to have you as a contributor to this project.
 [Release flows](#release-flows)
 
 ---
+
 ## Branching strategy
-Initially, the default branch would be master. We will create the develop branch and we will make develop branch as the default branch. 
 
-* develop (default)
+Initially, the default branch would be master. We will create the develop branch and we will make develop branch as the default branch.
 
-* master
+- develop (default)
 
+- master
 
 ### new features
 
 So for any new feature to be developed, a new branch should be created from develop branch, which should be named like **feature/x.**
 
-
 ### bug fixes
 
 For any bug to be fixed, here also a new branch should be created from develop branch, which should be named **bugfix/x**
-
 
 ## Release flows
 
@@ -47,6 +47,7 @@ git checkout -b feature/myfeature develop
 ```shell
 git commit
 ```
+
 we use husky as git hook to check formatting.
 
 3. Push your branch to GitHub:
@@ -55,16 +56,15 @@ we use husky as git hook to check formatting.
 git push origin feature/myfeature
 ```
 
-4. Keep your branch updated with develop by Rebasing your branch with develop branch. in case,  if you have a conflict you have to resolve it.
+4. Keep your branch updated with develop by Rebasing your branch with develop branch. in case, if you have a conflict you have to resolve it.
 
-```shell   
+```shell
 $ git checkout develop
 $ git pull
 $ git checkout feature/myfeature
 $ git rebase develop # update base commit in feature branch
 $ git push -f
 ```
-
 
 5. If you have multiple commits squash them and write a descriptive commit message that follows our commit message conventions.
 
@@ -75,8 +75,8 @@ An editor opened, leave the top commit by pick and change all commits to squash/
 next windows choose the proper commit messages base on commit message conventions, save and quit
 git push -f
 ```
-your commits squash into one.
 
+your commits squash into one.
 
 6. In GitHub, create a pull request to develop branch.
 
@@ -84,9 +84,7 @@ your commits squash into one.
 
 We use [Angular Commit Message Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-header). It is very precise rules over how our Git commit messages must be formatted. This format leads to easier to read commit history.
 
-
 Each commit message consists of a header, a body, and a footer.
-
 
 ```
 <header>
@@ -124,39 +122,38 @@ The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is opti
 
 Must be one of the following:
 
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-* **ci**: Changes to our CI configuration files and scripts (examples: CircleCi, SauceLabs)
-* **docs**: Documentation only changes
-* **feat**: A new feature
-* **fix**: A bug fix
-* **perf**: A code change that improves performance
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **test**: Adding missing tests or correcting existing tests
-
+- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- **ci**: Changes to our CI configuration files and scripts (examples: CircleCi, SauceLabs)
+- **docs**: Documentation only changes
+- **feat**: A new feature
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **test**: Adding missing tests or correcting existing tests
 
 ##### Scope
+
 The scope is conventional and optional, based on your project scopes. If angular scope helps you, use it. otherwise use your desire scopes.
 The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages).
-
 
 ### release base on commit message types
 
 | commit message type | release type |
-|:-------------------:|:------------:|
-| breaking change     | major        |
-| revert              | patch        |
-| feat                | minor        |
-| fix                 | patch        |
-| perf                | patch        |
-| content             | patch        |
+| :-----------------: | :----------: |
+|   breaking change   |    major     |
+|       revert        |    patch     |
+|        feat         |    minor     |
+|         fix         |    patch     |
+|        perf         |    patch     |
+|       content       |    patch     |
 
 ### Release branches
 
-Releases are based on 3 different  branches
+Releases are based on 3 different branches
 
-* alpha
-* beta
-* master
+- alpha
+- beta
+- master
 
 #### master branch:
 
@@ -175,7 +172,6 @@ git pull
 git merge beta --ff-only
 git push origin/master
 ```
-
 
 #### alpha branch:
 
