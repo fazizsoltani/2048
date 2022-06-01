@@ -21,14 +21,14 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - name: Install dependencies
-        run: yarn add --dev semantic-release @semantic-release/exec
-
       - name: Checking Code-Style
         run: yarn check-style
 
       - name: Checking Code-Quality
         run: yarn lint
+
+      - name: Install dependencies
+        run: yarn add --dev semantic-release @semantic-release/exec
 
       - name: Release
         env:
